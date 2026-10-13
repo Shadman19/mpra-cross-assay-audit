@@ -1,0 +1,9 @@
+### (a) risk-error Spearman, source minus target (Kircher LOFO, family bootstrap; target block bootstrap)
+Abell    source=0.308 target=0.009 diff=0.299 95% CI 0.204 to 0.399
+Ulirsch  source=0.308 target=0.008 diff=0.300 95% CI 0.191 to 0.413
+
+### (b) median within-group Pearson r, source minus target (group bootstrap)
+all    Abell    source=0.351 (21) target=0.028 (381) diff=0.323 95% CI 0.175 to 0.536
+all    Ulirsch  source=0.351 (21) target=0.031 (50) diff=0.320 95% CI 0.151 to 0.558
+active Abell    source=0.609 (12) target=0.053 (278) diff=0.556 95% CI 0.426 to 0.673
+active Ulirsch  source=0.609 (12) target=0.016 (17) diff=0.594 95% CI 0.255 to 0.804
