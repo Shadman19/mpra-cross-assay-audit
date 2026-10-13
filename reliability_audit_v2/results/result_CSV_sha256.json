@@ -1,0 +1,14 @@
+{
+  "conditional_magnitude_selection.csv": "ebe6d9d9d15a964f61081438c754967460344c77c94b5cdb5f2012675b5a4c3a",
+  "data_QC.csv": "151bc59d84c53a7d09a700d529f70aff2ddce13cc91bb8adbf6190fc78467494",
+  "external_predictions.csv": "6303a98a305ed1ecad9d3476579c0c511952c02021c80d4a9089b9dae79554e1",
+  "matched_retention_by_block.csv": "eb77abf177da677d7d115274f66416c48b298aca6272c63429d9b54a1ab341f2",
+  "partial_correlations.csv": "3fd3f74b81b253403aac1c90ed5fd53e3f1f403b2689f8d8df4a23141217aa8d",
+  "point_accuracy_by_dataset.csv": "7fd04d35f27195d7b62e3ed66f6044ff201ca934fbdbd3c7190ba25a34a7b449",
+  "precision_with_bootstrap_CIs.csv": "88029a51a5b94313e050bd576ff04f7e4389b754dcbef8f424480152a9055f64",
+  "primary_bootstrap_comparisons.csv": "7a79727b3e8d93fa9eccc5a1994420d490a8a35cce9d4ddfba82f566b8ad5f90",
+  "probability_calibration.csv": "e5bf802b22e19cc3f7511d1e769ad5c8c14c471e365f7dd18bc4e91d8215f306",
+  "source_point_accuracy.csv": "5e3eac457a81318bab9818a2eae451b79accd26a0814eb61ce3f0377dee18a53",
+  "track_metadata_preflight.csv": "3da71f5858983ebb4c5de288c610377ae1233bb9fb21a4383eaadcb94795aac3",
+  "variance_robust_accuracy_by_block.csv": "42c34b5d3b5df92803f583192c60d468e7133ac43654be9f3e8b9afd0da2a05d"
+}

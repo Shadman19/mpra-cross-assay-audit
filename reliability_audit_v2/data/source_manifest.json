@@ -1,0 +1,50 @@
+[
+  {
+    "path": "data/raw/kircher_elements.tsv.gz",
+    "url": "https://raw.githubusercontent.com/kircherlab/MPRA_SaturationMutagenesis/05d2ffb965090d3f5dd27dfb038cec493a15ab35/data/elements.tsv.gz",
+    "accession": "GSE126550",
+    "sha256": "fec2eed91fe27af3aae07ebce2eca65e9bad4bb6abba5d8c27f478887dd7b134",
+    "bytes": 2677485,
+    "downloaded_anonymously": true
+  },
+  {
+    "path": "data/raw/ulirsch_counts.tsv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE87nnn/GSE87711/suppl/GSE87711_RBC_MPRA_minP_raw.txt.gz",
+    "accession": "GSE87711",
+    "sha256": "94f74f5de695f5389c6c9f42e163f8abdeb3544c1309145a9fbd44fa74f462fb",
+    "bytes": 4029716,
+    "downloaded_anonymously": true
+  },
+  {
+    "path": "data/raw/ulirsch_design.tsv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE87nnn/GSE87711/suppl/GSE87711_design.txt.gz",
+    "accession": "GSE87711",
+    "sha256": "141eafcb023c9555dc129b11e5cf45985930d8cce2acb5193f511795a2750114",
+    "bytes": 769631,
+    "downloaded_anonymously": true
+  },
+  {
+    "path": "data/raw/abell_counts.tsv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE174nnn/GSE174534/suppl/GSE174534_OligoCounts.txt.gz",
+    "accession": "GSE174534",
+    "sha256": "576ffc492a455528c2fa2cd48de08bf9d4516ed4f8ebf10356bf3368a5723de4",
+    "bytes": 1545912,
+    "downloaded_anonymously": true
+  },
+  {
+    "path": "data/raw/abell_hg_conversion.tsv",
+    "url": "https://raw.githubusercontent.com/nsabell/mpra-v2/d62fca86f10b61ab8dbc64f2face45327ae040d0/annotation/hgConversionTable.txt",
+    "accession": "GSE174534",
+    "sha256": "12916af586dad818ac3292f580334f4f2eac926272a5a1d2f2c72282de122c20",
+    "bytes": 1233333,
+    "downloaded_anonymously": true
+  },
+  {
+    "path": "data/raw/hg19ToHg38.over.chain.gz",
+    "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz",
+    "accession": "UCSC chain",
+    "sha256": "5c0598e500ceb5a78c73086929e8ef993aec309bcafb595139b53d440b125a1d",
+    "bytes": 227698,
+    "downloaded_anonymously": true
+  }
+]

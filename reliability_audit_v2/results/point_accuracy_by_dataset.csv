@@ -1,0 +1,17 @@
+dataset,model,modality,variants,Pearson,Spearman,estimated_mean_reliability,noise_ceiling_corrected_Pearson,noise_status,primary_point_readout
+Abell,enformer,DNASE,22037,0.031414504093216375,0.016950236373998687,0.44472587014174303,0.047106844288961884,classical additive-error approximation,True
+Abell,enformer,ATAC,0,,,,,fewer than10 variants,False
+Abell,enformer,CAGE,22037,0.017575772149714522,0.008582205756922217,0.44472587014174303,0.026355315349181636,classical additive-error approximation,False
+Abell,enformer,H3K27ac,22037,0.018133633294953266,0.0035156931266829687,0.44472587014174303,0.02719184226126166,classical additive-error approximation,False
+Abell,borzoi,DNASE,22037,0.02868304030055969,0.011757620843844433,0.44472587014174303,0.04301094517243244,classical additive-error approximation,False
+Abell,borzoi,ATAC,0,,,,,fewer than10 variants,False
+Abell,borzoi,CAGE,22037,0.021415193965454854,0.01476307598949215,0.44472587014174303,0.03211262557432629,classical additive-error approximation,False
+Abell,borzoi,H3K27ac,22037,0.020571885023589122,0.0067417743695124275,0.44472587014174303,0.03084806246379364,classical additive-error approximation,False
+Ulirsch,enformer,DNASE,2375,0.09549320158522545,0.025458904210821916,0.48857254668926053,0.13661800027747986,classical additive-error approximation,True
+Ulirsch,enformer,ATAC,0,,,,,fewer than10 variants,False
+Ulirsch,enformer,CAGE,2375,0.08569190961511411,0.028175864977088762,0.48857254668926053,0.12259571505859673,classical additive-error approximation,False
+Ulirsch,enformer,H3K27ac,0,,,,,fewer than10 variants,False
+Ulirsch,borzoi,DNASE,2375,0.09782414540725576,0.03648585352482839,0.48857254668926053,0.13995278095755495,classical additive-error approximation,False
+Ulirsch,borzoi,ATAC,0,,,,,fewer than10 variants,False
+Ulirsch,borzoi,CAGE,2375,0.08065360815563855,0.014175566689822,0.48857254668926053,0.11538763470562682,classical additive-error approximation,False
+Ulirsch,borzoi,H3K27ac,0,,,,,fewer than10 variants,False

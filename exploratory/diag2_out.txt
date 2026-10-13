@@ -1,0 +1,38 @@
+### 1. Family-held-out Kircher risk (HGB refit per held-out family on the package feature set)
+Traceback (most recent call last):
+  File "/home/spath004/cardiac_r21/analysis/diag2.py", line 23, in <module>
+    m = HistGradientBoostingClassifier(max_depth=3, max_iter=200, learning_rate=0.05, random_state=0).fit(X[tr], y[tr])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/spath004/cardiac_r21/audit2/Reliability_Audit_v2/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/spath004/cardiac_r21/audit2/Reliability_Audit_v2/.venv/lib/python3.12/site-packages/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py", line 897, in fit
+    grower.grow()
+  File "/home/spath004/cardiac_r21/audit2/Reliability_Audit_v2/.venv/lib/python3.12/site-packages/sklearn/ensemble/_hist_gradient_boosting/grower.py", line 388, in grow
+    self.split_next()
+  File "/home/spath004/cardiac_r21/audit2/Reliability_Audit_v2/.venv/lib/python3.12/site-packages/sklearn/ensemble/_hist_gradient_boosting/grower.py", line 624, in split_next
+    self._compute_best_split_and_push(right_child_node)
+  File "/home/spath004/cardiac_r21/audit2/Reliability_Audit_v2/.venv/lib/python3.12/site-packages/sklearn/ensemble/_hist_gradient_boosting/grower.py", line 457, in _compute_best_split_and_push
+    node.split_info = self.splitter.find_node_split(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+### 1. Family-held-out Kircher risk (HGB refit per held-out family on the package feature set)
+families 19 n 1497 spearman(LOFO risk, error)=0.308
+   mean_risk  observed_error    n
+q                                
+0      0.001           0.003  300
+1      0.007           0.040  299
+2      0.049           0.104  299
+3      0.197           0.227  299
+4      0.457           0.277  300
+family-bootstrap 95% CI: 0.219 to 0.401
+Abell spearman(risk,error)=0.009, block-bootstrap 95% CI -0.013 to 0.033
+Ulirsch spearman(risk,error)=0.008, block-bootstrap 95% CI -0.059 to 0.065
+
+### 2. Within-group correlation summaries with group-bootstrap 95% CIs (groups n>=10, nonzero variance)
+Abell    all    groups=381 median r=0.028  95% CI 0.014 to 0.048
+Abell    active groups=278 median r=0.053  95% CI 0.029 to 0.080
+Kircher  all    groups= 21 median r=0.351  95% CI 0.214 to 0.560
+Kircher  active groups= 12 median r=0.609  95% CI 0.483 to 0.725
+Ulirsch  all    groups= 50 median r=0.031  95% CI -0.017 to 0.115
+Ulirsch  active groups= 17 median r=0.016  95% CI -0.120 to 0.328

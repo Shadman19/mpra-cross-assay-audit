@@ -1,0 +1,4 @@
+Original primary: FAIL (unchanged). Subgroup follow-up COMPLETE.
+All70 fixed external tests use Holm correction. Non-estimable strata remain in the correction family.
+Total retained variants match; audited sign calls may differ.
+No new GPU scoring or AlphaGenome outputs used.

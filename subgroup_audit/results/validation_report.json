@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-13T03:09:40.788376+00:00",
+  "scientific_status": {
+    "original_main_audit": "User-reported completed FAIL; unchanged by this package",
+    "actual_public_noise_calculation": "COMPLETE after plan/code locking,10000 bootstrap draws",
+    "new_model_subgroup_calculations": "PENDING existing Wahab score files; not present in the authoring sandbox"
+  },
+  "software_validation": {
+    "tests_passed": 14,
+    "full_pipeline": "Temporary synthetic integration with mocked score-loading/annotation boundaries; original estimate/count reconciliation and70-test family checked",
+    "new_descriptive_coverage": "PASS separate smoke check",
+    "statistical_assets_lock": "PASS",
+    "syntax": "Python compile and bash syntax checks passed",
+    "GPU_or_API_modules": "No Torch or AlphaGenome imported by the tested CPU code"
+  },
+  "public_annotation": {
+    "actual_anonymous_download_bytes": 49809776,
+    "actual_bigbed_sha256": "42a9cf761ed87e2ce7b26d60a84b9b623848a2a8c2de9c84c246eb4c6d38417c",
+    "bundled_variants": 62057
+  },
+  "manuscript": {
+    "template": "Unchanged OUP1.5 Modern Large, author-year, journal-specific options verified",
+    "compiled_PDF_pages": 4,
+    "abstract_words": 199,
+    "visual_QA": "All four pages rendered and inspected; publisher headers/template placeholders remain identifiable as a draft",
+    "new_model_results": "No invented subgroup numbers; panels pending"
+  },
+  "conference": {
+    "name": "GLBIO2027 full-paper track",
+    "deadline": "2027-01-07 23:59AoE",
+    "review": "Conference peer review; subsequent Bioinformatics Advances publication requires separate journal review"
+  },
+  "AlphaGenome": "Not loaded, trained on or fitted",
+  "original_R21_documents": "Untouched"
+}

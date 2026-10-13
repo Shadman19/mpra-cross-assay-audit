@@ -1,0 +1,15 @@
+{
+ "code/annotate.py": "d3ce2e2432098bc7b1dcaf562c89375be9e20f5760fcabfec0198f88018a2901",
+ "code/audit_engine.py": "0e8231a60090c2ba6a270154d8b5e61c31661dba8d3190ee8059817a780b7e79",
+ "code/audit_stats.py": "f78f075125444e9ba7c18eafb5d84cc990cd2cb4cef8ee4ebd43582bd51a3daf",
+ "code/build_annotations.py": "677ccdb174645d72e93b307980b92b2282f50956005bdce7f64d53a0169b3391",
+ "code/common.py": "9796179adbdb226452a23b32d01e6e13b40b36f6e672347f795f09be04ac3c33",
+ "code/figures.py": "ca22c9b6685da2d53cbc0d08ec2b53f25860084836b2cc80b17d0008ffb9b41b",
+ "code/noise_ceiling.py": "37533db046b6243f222e643beaa65c66926b18a8f1174499ce26a3e36846afc4",
+ "code/policies.py": "9e400f76f46b69cd095f28caf5fa28582998824c4bdbbf2bec7ca584e0f02150",
+ "code/run_audit.py": "f5d8856fcc8dce96a85f10580c17e74bc78124e558d70a0ea00634500426a62e",
+ "config/preregistered_plan.json": "8252d9bea14884797e29e5eecfa33d5fef209c1c382d2246d554254265fc64c0",
+ "config/cell_aliases.json": "92a7fa128d5067e20c0d01b19b6c01929d154a670434dd87deb9c7aef5963444",
+ "annotations/annotation_manifest.json": "ba7516a45ae87edcd74d50af98ba8af51b6af9228f09649314be74c713dd150c",
+ "annotations/variant_ccre_annotations.csv.gz": "8523e7b42b7a4706f5e12aebe726459843b9cbfbf40129f156723f6e2db120a8"
+}

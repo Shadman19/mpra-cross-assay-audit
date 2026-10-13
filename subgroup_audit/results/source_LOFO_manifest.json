@@ -1,0 +1,956 @@
+{
+  "enformer": [
+    {
+      "heldout": "BCL11A",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "F9",
+      "fit_groups": [
+        "ZFAND3",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "FOXE1",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "UC88",
+        "IRF6",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "GLOBIN",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "GP1BB",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "HNF4A",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "IRF4",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "IRF6",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "LDLR",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "MSMB",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "MYC",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "PKLR",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "RET",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "SORT1",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "TCF7L2",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "TERT",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "UC88",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "IRF6",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "ZFAND3",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "ZRS",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    }
+  ],
+  "borzoi": [
+    {
+      "heldout": "BCL11A",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "F9",
+      "fit_groups": [
+        "ZFAND3",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "FOXE1",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "UC88",
+        "IRF6",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "GLOBIN",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "GP1BB",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "HNF4A",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "IRF4",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "IRF6",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "LDLR",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "MSMB",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "MYC",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "PKLR",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "RET",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "SORT1",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "TCF7L2",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "TERT",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "UC88",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "IRF6",
+        "MSMB",
+        "ZFAND3"
+      ]
+    },
+    {
+      "heldout": "ZFAND3",
+      "fit_groups": [
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "ZRS",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    },
+    {
+      "heldout": "ZRS",
+      "fit_groups": [
+        "ZFAND3",
+        "F9",
+        "IRF4",
+        "SORT1",
+        "GLOBIN",
+        "TERT",
+        "BCL11A",
+        "RET",
+        "HNF4A",
+        "TCF7L2",
+        "LDLR",
+        "PKLR",
+        "GP1BB"
+      ],
+      "calibration_groups": [
+        "MYC",
+        "FOXE1",
+        "UC88",
+        "IRF6",
+        "MSMB"
+      ]
+    }
+  ]
+}

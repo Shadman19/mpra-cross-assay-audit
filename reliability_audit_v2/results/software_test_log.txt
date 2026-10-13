@@ -1,0 +1,17 @@
+Software validation only. Temporary synthetic efficacy outputs were deleted; no new scientific model result.
+
+test_actual_data_replication_and_independence (test_core.PublicSourceTests.test_actual_data_replication_and_independence) ... ok
+test_checksums_and_protocol (test_core.PublicSourceTests.test_checksums_and_protocol) ... ok
+test_native_imports_and_strand_contract (test_core.PublicSourceTests.test_native_imports_and_strand_contract) ... ok
+test_center_score_and_inverse_track_scale (test_core.SequenceTests.test_center_score_and_inverse_track_scale) ... ok
+test_real_allele_edit_not_reference_mutation (test_core.SequenceTests.test_real_allele_edit_not_reference_mutation) ... ok
+test_alpha_permission_closed (test_core.StatisticalTests.test_alpha_permission_closed) ... ok
+test_end_to_end_mock_smoke_outputs_only_temporary (test_core.StatisticalTests.test_end_to_end_mock_smoke_outputs_only_temporary) ... ok
+test_matched_retention_and_external_label_poison (test_core.StatisticalTests.test_matched_retention_and_external_label_poison) ... ok
+test_noise_ceiling_no_clipping_or_fake_precision (test_core.StatisticalTests.test_noise_ceiling_no_clipping_or_fake_precision) ... ok
+test_paired_block_bootstrap_known_identity (test_core.StatisticalTests.test_paired_block_bootstrap_known_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 24.917s
+
+OK

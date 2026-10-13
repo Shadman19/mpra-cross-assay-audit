@@ -1,0 +1,63 @@
+{
+  "record_kind": "Internally timestamped, locked follow-up subgroup analysis. Global primary FAIL is known. No subgroup performance has been examined. Not an externally registered confirmatory trial.",
+  "lock_utc": "2026-10-13T01:42:17.913656+00:00",
+  "known_global_results": "User-reported Abell Enformer risk-vs-magnitude gain -0.021 CI95[-0.036,-0.007]; Ulirsch -0.003 CI95[-0.065,0.067]. Original FAIL cannot be reversed by any subgroup.",
+  "seed": 20261013,
+  "bootstrap_seed": 913071,
+  "bootstrap_draws": 10000,
+  "input_models": [
+    "enformer",
+    "borzoi"
+  ],
+  "AlphaGenome": "Excluded from input loading, training, fitting and statistics. No AlphaGenome dependency or permission flag exists in this package.",
+  "inputs": "Existing v2 variants.csv, both complete eight-shard journals/state files, frozen track metadata, original external_predictions.csv and audit_summary.json. All original files are read-only.",
+  "external_datasets": [
+    "Abell",
+    "Ulirsch"
+  ],
+  "source_diagnostics": "Kircher grouped leave-one-family-out risk fitting; no held-out family labels in fit, source scaling or probability calibration. Source results descriptive, not part of formal external hypothesis tests.",
+  "Enformer_external_policy": "Reuse risk_raw from original external_predictions.csv after exact population and frozen-forecast checks; no retraining or reranking changes.",
+  "Borzoi_external_policy": "New CPU source-only fit with same fixed 14-fit/5-calibration Kircher family split and 17-feature architecture, own-model magnitude/dispersion and Enformer as the other model. No tuning.",
+  "fixed_estimator": {
+    "type": "HistGradientBoostingClassifier",
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 30,
+    "l2_regularization": 5,
+    "learning_rate": 0.07,
+    "group_weighting": "Equal family total weight",
+    "calibration": "Source-only isotonic, ranking uses raw classifier risk",
+    "source_split": "Ascending SHA256(20261012+family); first ceil(.25*n) calibrate; held-out Kircher family removed before split"
+  },
+  "subgroup_definitions": {
+    "regulatory_type": "Primary uniform annotation across all studies: overlap with ENCODE3 hg38 cCRE PLS=promoter-like, pELS/dELS=enhancer-like. Other/unannotated remain reported, not relabeled enhancer. PLS+ELS overlap is ambiguous and excluded from this two-level contrast. These are genomic signatures, not experimentally established reporter construct types.",
+    "effect_strength": "Strong audit views have |screen effect|>=1.0 log2; weak active audit views have0.5<=|screen effect|<1.0. <0.5 is a separate negligible/noisy descriptive category. External screening and sign truth use disjoint replicate samples exactly as v2. A variant can contribute eligible views to both bins; each bin averages its views once per variant and bootstrap preserves clusters. Never select or rerank within measured-effect groups.",
+    "model": "Frozen DNASE forecasts Enformer vs Borzoi. DNASE only is inferential; no best-of-modality choice. All other modalities are descriptive from existing outputs.",
+    "cell_match": "For each model, all actual selected DNASE track descriptions must match the declared assay cell with strict, prespecified aliases. Any tissue/other-cell/mouse-cell human-track proxy is unmatched. Missing identity is unknown. No artificial mismatched-cell scores are generated. An absent external unmatched stratum is NOT ESTIMABLE."
+  },
+  "retention": {
+    "rate": 0.25,
+    "global": "Exactly floor(.25*n) per original dataset/1Mb block for each model/policy; then stratify. Subgroup selected counts need not match and are displayed. Audited sign counts differ from total retained counts.",
+    "metadata_sensitivity": "For regulatory type and cell-match only, reselect at floor(.25*n) within block and metadata stratum using frozen scores. Exact within-stratum budgets. Effect-strength groups are never selection strata."
+  },
+  "sign_target": "External v2 replicate-separated sign error averaged over qualifying views per variant; Kircher published source coefficient sign, with missing replicate noise acknowledged.",
+  "formal_test_family": {
+    "overall_gains": 4,
+    "global_subgroup_gains": 24,
+    "global_subgroup_interactions": 12,
+    "metadata_matched_subgroup_gains": 16,
+    "metadata_matched_interactions": 8,
+    "paired_model_contrasts": 6,
+    "total_fixed_tests": 70,
+    "datasets": "2 external studies",
+    "models": "2 open models",
+    "subgroup_dimensions": "regulatory_type, effect_strength, cell_match",
+    "model_contrasts": "Borzoi-Enformer point Pearson difference, Enformer-Borzoi all-retention sign-error difference, Borzoi-Enformer confidence-filtering gain difference"
+  },
+  "multiplicity": "Two-sided null-centered paired cluster-bootstrap tests, approximate conditional inference. Holm FWER0.05 across all70 slots, including non-estimable slots as p=1. Report pointwise95% and conservative Bonferroni70-test family intervals. No selective removal of null tests; no crossing subgroups or data-dependent cutoffs.",
+  "evaluability": "Each gain needs>=20 audited variants per policy and>=10 blocks with audit calls for both. Model contrasts require>=20 paired evaluable variants and>=10 contributing blocks. Missing stratum/correlation/unstable bootstrap is NOT ESTIMABLE, not zero-effect evidence.",
+  "bootstrap": "Resample 1Mb genomic blocks as paired units separately within each external study. Kircher source diagnostics resample whole family. Conditional on frozen policies; no claim of exact finite-sample coverage or proven LD independence.",
+  "noise_ceiling": "Primary-eligible variants, all measured effect sizes; R=1-mean(SEM\u00b2)/Var(mean effect), Pearson ceiling=sqrt(R). Abell SEM\u00b2=Var(3 paired effects)/3; Ulirsch=Var(6 RNA log ratios)/6+Var(2 DNA log ratios)/2. Bootstrap re-estimates R and corrected Pearson. R<=0 is unidentified; corrected |r|>1 is unstable, never clipped. No Spearman ceiling correction. Kircher full ceiling unavailable because most per-variant replicate estimates are absent. LDLR/SORT1 separate library agreement descriptive only.",
+  "interpretation": "No subgroup result rescues original FAIL. Harm requires Holm<.05 and negative gain; benefit requires Holm<.05 and positive gain plus>=90% baseline audited opportunities. Dataset-specific discoveries require independent replication. Lack of significance is not equivalence. Original Ulirsch interval permits substantial gains and losses.",
+  "conference": "GLBIO2027 full-paper track; January7,2027 23:59AoE, official OUP Bioinformatics Advances template, <=9pages inclusive; separate journal publication review after conference acceptance."
+}

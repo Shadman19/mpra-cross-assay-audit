@@ -1,0 +1,4 @@
+dataset,variants,strong_views,weak_active_views,negligible_noisy_views,variants_with_strong_view,variants_with_weak_active_view,variants_with_negligible_view,variants_in_multiple_bins,note
+Abell,22037,18864,19010,28237,12911,14009,17210,18203,Bins can overlap across replicate views; negligible views not added to sign-target tests. No new p-values or label-based selection.
+Kircher,28932,565,932,27435,565,932,27435,0,Bins can overlap across replicate views; negligible views not added to sign-target tests. No new p-values or label-based selection.
+Ulirsch,2375,431,973,3346,356,823,2033,837,Bins can overlap across replicate views; negligible views not added to sign-target tests. No new p-values or label-based selection.

@@ -1,0 +1,37 @@
+{
+  "actual_public_data_prepared": true,
+  "model_predictions_generated": false,
+  "model_results": "Pending",
+  "dataset_QC": [
+    {
+      "dataset": "Abell",
+      "acquisition_rows": 26959,
+      "primary_variants": 22037,
+      "unique_primary_variants": 22037,
+      "primary_blocks": 525,
+      "observed_abs_effect_ge_0_5": 9500,
+      "reference_mismatches": 99,
+      "replicate_information": "3 paired RNA/DNA transfections"
+    },
+    {
+      "dataset": "Kircher",
+      "acquisition_rows": 44647,
+      "primary_variants": 28932,
+      "unique_primary_variants": 28932,
+      "primary_blocks": 19,
+      "observed_abs_effect_ge_0_5": 1497,
+      "reference_mismatches": 4,
+      "replicate_information": "No variant-level replicate estimates for most elements; never manufacture SEs"
+    },
+    {
+      "dataset": "Ulirsch",
+      "acquisition_rows": 2433,
+      "primary_variants": 2375,
+      "unique_primary_variants": 2375,
+      "primary_blocks": 79,
+      "observed_abs_effect_ge_0_5": 514,
+      "reference_mismatches": 11,
+      "replicate_information": "6 RNA / 2 DNA libraries; covariance-independence approximation"
+    }
+  ]
+}

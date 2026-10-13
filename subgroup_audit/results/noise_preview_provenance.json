@@ -1,0 +1,10 @@
+{
+  "calculated_from": "Prepared public v2 variants.csv recovered from the prior package",
+  "source_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+  "preregistered_plan_sha256": "8252d9bea14884797e29e5eecfa33d5fef209c1c382d2246d554254265fc64c0",
+  "analysis_assets_lock_sha256": "74e5e31b94140205cbcc62cfc11e8a4840eeef482de369b29f9376b5e61219b8",
+  "bootstrap_draws": 10000,
+  "actual_calculation": true,
+  "model_scores_used": false,
+  "core_subgroup_model_audit": "PENDING Wahab existing scores"
+}

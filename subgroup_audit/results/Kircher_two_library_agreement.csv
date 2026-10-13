@@ -1,0 +1,3 @@
+element,paired_library_variants,Pearson_library_agreement,Spearman_library_agreement,note
+LDLR,998,0.9714440018023418,0.8627261299687394,Two independent library measurements for this element only; not a full Kircher noise ceiling and no independent-variant p-value claim
+SORT1,1806,0.9609858925244401,0.8643637663186748,Two independent library measurements for this element only; not a full Kircher noise ceiling and no independent-variant p-value claim

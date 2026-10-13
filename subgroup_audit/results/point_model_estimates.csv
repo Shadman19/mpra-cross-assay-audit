@@ -1,0 +1,7 @@
+dataset,model,readout,variants,Pearson,ci95_low,ci95_high,interval_type
+Abell,enformer,DNASE,22037,0.03141450409321636,0.018977546581437413,0.04479724992593406,Pointwise estimation interval; no separate significance claim
+Abell,borzoi,DNASE,22037,0.028683040300559688,0.015543601811016022,0.04271286685395102,Pointwise estimation interval; no separate significance claim
+Ulirsch,enformer,DNASE,2375,0.09549320158522547,0.04276416070711663,0.15192694136475457,Pointwise estimation interval; no separate significance claim
+Ulirsch,borzoi,DNASE,2375,0.09782414540725581,0.04735357105094036,0.1505014438755589,Pointwise estimation interval; no separate significance claim
+Kircher_LOFO,enformer,DNASE,28932,0.5808598743904091,0.3898372481114556,0.6841959516320639,Pointwise estimation interval; no separate significance claim
+Kircher_LOFO,borzoi,DNASE,28932,0.551579166132605,0.38485265406886315,0.6505434698194524,Pointwise estimation interval; no separate significance claim

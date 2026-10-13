@@ -1,0 +1,4 @@
+dataset,eligible_variants,replicate_noise_variants,clusters,mean_effect_reliability,Pearson_noise_ceiling,ceiling_ci95_low,ceiling_ci95_high,bootstrap_identifiable_fraction,reliability_ci95_low,reliability_ci95_high,status,approximation
+Abell,22037,22037,525.0,0.44472587014174303,0.6668777025375365,0.6531902016913651,0.6796303067179356,1.0,0.42665743958871777,0.4618973538101072,IDENTIFIABLE APPROXIMATION,"Abell: 3 paired transfections; Ulirsch: RNA/DNA crossed components, unmodeled library covariance remains"
+Kircher,28932,0,,,,,,,,,NOT IDENTIFIABLE: full benchmark lacks per-variant replicate effect estimates,No SE manufactured from publication p-values
+Ulirsch,2375,2375,79.0,0.4885725466892604,0.6989796468347704,0.645162618043777,0.7392621694887328,1.0,0.41623480380521427,0.5465085552372547,IDENTIFIABLE APPROXIMATION,"Abell: 3 paired transfections; Ulirsch: RNA/DNA crossed components, unmodeled library covariance remains"

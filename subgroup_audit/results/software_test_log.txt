@@ -1,0 +1,25 @@
+SOFTWARE VALIDATION ONLY. Synthetic smoke-test progress is not new scientific model evidence. All mock outputs were created in temporary directories and deleted.
+
+test_ceiling_no_clipping (test_audit.AuditTests.test_ceiling_no_clipping) ... ok
+test_effect_bins_use_screen_not_truth (test_audit.AuditTests.test_effect_bins_use_screen_not_truth) ... ok
+test_exact70_tests_end_to_end_no_scientific_files (test_audit.AuditTests.test_exact70_tests_end_to_end_no_scientific_files) ... ok
+test_exact_metadata_retention (test_audit.AuditTests.test_exact_metadata_retention) ... ok
+test_family_isolation_source_lofo (test_audit.AuditTests.test_family_isolation_source_lofo) ... ok
+test_fit_uses_only_source_values (test_audit.AuditTests.test_fit_uses_only_source_values) ... ok
+test_full_cpu_pipeline_temporary_synthetic_IO (test_audit.AuditTests.test_full_cpu_pipeline_temporary_synthetic_IO) ... Completed Abell contrasts; source diagnostics cannot rescue the main FAIL.
+Completed Ulirsch contrasts; source diagnostics cannot rescue the main FAIL.
+Completed Kircher_LOFO contrasts; source diagnostics cannot rescue the main FAIL.
+ok
+test_holm_known_values_includes_unestimable (test_audit.AuditTests.test_holm_known_values_includes_unestimable) ... ok
+test_no_label_based_selection (test_audit.AuditTests.test_no_label_based_selection) ... ok
+test_null_identity_bootstrap (test_audit.AuditTests.test_null_identity_bootstrap) ... ok
+test_plan_locked_and_family_70 (test_audit.AuditTests.test_plan_locked_and_family_70) ... ok
+test_runtime_has_no_Torch_or_API (test_audit.AuditTests.test_runtime_has_no_Torch_or_API) ... ok
+test_strict_cell_aliases (test_audit.AuditTests.test_strict_cell_aliases) ... ok
+test_unmatched_absent_not_invented (test_audit.AuditTests.test_unmatched_absent_not_invented) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 9.305s
+
+OK
+Original primary remains FAIL ; CPU follow-up complete. No automatic positive paper claim.

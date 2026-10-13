@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-12T10:08:40.461491+00:00",
+  "actual_public_data_preparation": "COMPLETE",
+  "public_source_bytes": "All six raw downloads anonymized-access verified and SHA256 checked",
+  "genome_verification": "Actual 835393456-byte hg38.2bit downloaded; publisher MD5 matched",
+  "tests": {
+    "unittest_count": 10,
+    "unittest_status": "PASS",
+    "scope": "Real-data effect/variance reconstruction, independence, canonical duplicates, native imports, strand permutations, sequence edits, fixed retention, external-label poisoning, output-use permission, temporary mock smoke audit, paired 10000-draw identity check",
+    "efficacy_inference_from_tests": false
+  },
+  "native_model_checks": {
+    "Enformer_and_Borzoi_imports": "PASS, pinned sources with Torch2.6.0 CPU and Transformers4.57.6",
+    "Enformer_tiny_untrained_forward": "PASS: shape[1,64,9], finite; a software interface test, not pretrained efficacy",
+    "full_released_weight_loading": "PENDING Wahab",
+    "full_native_GPU_reproducibility_and_Borzoi_crop_contract": "PENDING Wahab"
+  },
+  "compile_and_shell_syntax": "PASS",
+  "new_Enformer_Borzoi_scientific_predictions": "NOT RUN in authoring sandbox",
+  "AlphaGenome_fitting_permission_gate": "CLOSED by default; no new AlphaGenome API calls or fits performed here",
+  "preprint": "Four pages, rendered and visually checked; all new model-result panels marked PENDING",
+  "R21_documents": "Untouched",
+  "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75"
+}

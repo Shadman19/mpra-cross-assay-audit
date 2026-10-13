@@ -1,0 +1,4 @@
+dataset,acquisition_rows,primary_variants,unique_primary_variants,primary_blocks,observed_abs_effect_ge_0_5,reference_mismatches,replicate_information
+Abell,26959,22037,22037,525,9500,99,3 paired RNA/DNA transfections
+Kircher,44647,28932,28932,19,1497,4,No variant-level replicate estimates for most elements; never manufacture SEs
+Ulirsch,2433,2375,2375,79,514,11,6 RNA / 2 DNA libraries; covariance-independence approximation

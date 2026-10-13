@@ -1,0 +1,12 @@
+{
+  "source_url": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/encode3/ccre/encodeCcreCombined.bb",
+  "source_sha256": "42a9cf761ed87e2ce7b26d60a84b9b623848a2a8c2de9c84c246eb4c6d38417c",
+  "source_bytes": 49809776,
+  "anonymous_download_verified": true,
+  "annotation": "ENCODE3 hg38/UCSC encodeCcreCombined, cell-agnostic BED9+6; NOT an experimental MPRA construct-type label",
+  "coordinate_source_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+  "subset_sha256": "8523e7b42b7a4706f5e12aebe726459843b9cbfbf40129f156723f6e2db120a8",
+  "subset_variants": 62057,
+  "coordinate_convention": "1-based variant POS converted to0-based half-open overlap",
+  "unknown": "Other/unannotated/ambiguous never relabeled as enhancer"
+}

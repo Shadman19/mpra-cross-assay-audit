@@ -1,0 +1,82 @@
+{
+  "lock_utc": "2026-10-12T09:06:13.587553+00:00",
+  "record_kind": "Internally timestamped prospective v2 analysis plan on retrospective public data. No external preregistration claim. Known v1 AlphaGenome findings recorded separately; no new open-model predictions observed.",
+  "seed": 20261012,
+  "bootstrap_seed": 812071,
+  "bootstrap_replicates": 10000,
+  "training_dataset": "Kircher 2019, canonical SNVs with >=10 barcodes; published coefficients, not manufactured per-variant SEs",
+  "validation_datasets": [
+    "Ulirsch",
+    "Abell"
+  ],
+  "validation_conditions": {
+    "Ulirsch": "K562_CTRL, centered 1/2 insert; GATA1 perturbations excluded",
+    "Abell": "GM12878, 1KGTest/1KGControl Base SNVs; Sabeti reused controls/haplotypes excluded"
+  },
+  "independence": "Exclude all validation 1 Mb blocks appearing in Kircher; exclude Abell blocks appearing in Ulirsch. Blocks are conservative genomic clusters, not guaranteed LD-independent units.",
+  "primary_point_prediction": "Frozen cell-matched Enformer DNASE signed log2 fold score; no oracle best-of-modality selection. Borzoi scored as a second frozen model.",
+  "Enformer_context_bp": 196608,
+  "Enformer_port": "Pinned released PyTorch conversion, corrected TensorFlow gamma at length1536; do not claim exact TensorFlow393216-context reproduction",
+  "Borzoi_context_bp": 524288,
+  "local_score_width_bp": 512,
+  "context_tiles_bp": 2048,
+  "orientations": "Forward and reverse-complement mean; stranded Borzoi outputs remapped with explicit strand_pair metadata",
+  "primary_retention": 0.25,
+  "secondary_retentions": [
+    0.1,
+    0.5,
+    0.75
+  ],
+  "retention_rule": "Exactly floor(rate*n) within dataset/1Mb block using QC-primary eligible variants only. Selection uses model scores, never external effects or replicate values.",
+  "measured_effect_threshold_log2": 0.5,
+  "audit_views": "Ulirsch: disjoint RNA halves with distinct DNA replicates, then swap. Abell: each paired replicate screens |effect|>=0.5; the other two provide sign truth. Screening threshold is an audit-label definition, never an inference-time feature or gate.",
+  "noise_ceiling": "Classical additive measurement-error correction, r(pred,mean_effect)/sqrt(1-mean(SEM^2)/var(mean_effect)). Abell paired SEM^2=var(rep_effect)/3; Ulirsch SEM^2=var(RNA_logratio)/6+var(DNA_logratio)/2. Report nonpositive reliability and corrected correlations>1 as unidentified/unstable; never clip into credible-looking values.",
+  "primary_policy": "Kircher-trained residual sign-error risk classifier using deployment-available Enformer/Borzoi score summaries. Fixed HGB depth/iterations, source-family fit/calibration split, source-only scales and probability calibration.",
+  "primary_comparator": "Magnitude-only selection of |Enformer DNASE score|, same forecast and exact retention.",
+  "secondary_label_free_policies": [
+    "Cross-track disagreement",
+    "Cross-model disagreement Enformer vs Borzoi",
+    "Random ranking"
+  ],
+  "element_scores": [
+    "Enformer prediction spread",
+    "Borzoi prediction spread",
+    "Cross-track disagreement",
+    "Cross-model disagreement"
+  ],
+  "adjustment": "Partial rank correlations of block/element reliability with inference-only scores controlling rank(measured assay spread) and rank(mean SEM). Audit covariates never enter deployment scores. Diagnostic aftereffects cannot tune primary policy.",
+  "magnitude_conditional_test": "Match per-block, per-source-frozen-magnitude-quintile selection budgets to magnitude-only; require positive paired error reduction in both external datasets. This tests information beyond magnitude without using test labels to set budgets.",
+  "success_rule": "PASS only if each independent dataset has >=20 retained audit-sign calls and >=10 contributing 1Mb blocks; same retention for all policies; source-only risk policy reduces aggregate screened-and-held-out-sign error versus magnitude-only with Bonferroni two-dataset97.5% paired block-bootstrap lower CI>0 in BOTH datasets; conditional-within-magnitude test has positive95% lower CI in BOTH; at least90% of magnitude policy audited sign opportunities retained; and full-retention primary point correlation has positive95% lower CI in BOTH. If adequately evaluable but any benefit/fidelity gate fails: FAIL. Missing resources, incomplete scoring, or insufficient calls/blocks: INCONCLUSIVE. Secondary policies cannot rescue FAIL.",
+  "effect_definition": "Recomputed log2 ALT/REF RNA ratios minus log2 ALT/REF DNA ratios from public counts with a fixed0.5 pseudocount; not the source publication DESeq2 p-values, not clinical pathogenicity",
+  "AlphaGenome": "Gate closed by default. Algebraic/raw comparisons may be acquired. ANY fitted map, risk estimator or partial-regression analysis involving AlphaGenome outputs requires ALPHAGENOME_CALIBRATION_PERMISSION=1 under applicable terms. Primary open-model verdict does not require AlphaGenome.",
+  "limits": "Independent functional assays are not necessarily loci withheld from foundation-model training. Episomal reporter effects differ from endogenous regulation. Shared track/model training and assay noise limit causal and probabilistic claims.",
+  "amendment_before_open_predictions": {
+    "utc": "2026-10-12T09:34:26.437636+00:00",
+    "reason": "Source audit found repeated Abell Base constructs and ambiguous independence of Ulirsch RNA library replicates. No new open-model outputs have been observed.",
+    "canonical_construct": "One lexicographically smallest source row ID per QC-eligible Abell genomic variant. No effect-based choice.",
+    "replicate_assumption": "Ulirsch six RNA libraries and two DNA libraries are treated as separate samples for an approximate variance model; unmodeled technical or shared biological covariance may remain. Abell has three reported independent paired transfections.",
+    "corrected_correlation": "Correlations outside [-1,1] are reported as unstable and excluded from adjusted-correlation audits, rather than clipped.",
+    "implementation_detail_lock_utc": "2026-10-12T10:00:46.313731+00:00",
+    "implementation_detail_note": "Exact fixed features, hyperparameters and source-group hash split made explicit before any v2 model outputs. Prediction spread is computed only from candidate context model outputs."
+  },
+  "fixed_features": [
+    "log1p absolute Enformer DNASE score / source-fit SD",
+    "Enformer DNASE cross-track SD / source-fit SD",
+    "source-scale standardized absolute Enformer/Borzoi DNASE disagreement",
+    "candidate-block Enformer and Borzoi prediction SDs / source-fit SDs",
+    "six signed ATAC/CAGE/H3K27ac means and six missingness flags"
+  ],
+  "fixed_estimator": {
+    "kind": "HistGradientBoostingClassifier",
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 30,
+    "l2_regularization": 5,
+    "learning_rate": 0.07,
+    "family_weighting": "Each fit/calibration family total weight equal",
+    "calibration": "Source calibration-family isotonic; raw risk used for ranking"
+  },
+  "source_split": "SHA256(seed + family string), ascending digest; first ceil(0.25 * 19)=5 families calibrate, remaining14 fit",
+  "candidate_context_spread": "Inference-only SD within fixed dataset/1Mb candidate block, computed without labels. Candidate-set-dependent, not a reliability claim for an isolated variant. Same transform is frozen for fit/calibration/external sets.",
+  "optional_AlphaGenome_policy": "Only with applicable permission: augment with source-fit-standardized AlphaGenome DNASE mean; use maximum signed pairwise standardized disagreement among the three models. Same source split/hyperparameters and external rule, secondary only."
+}

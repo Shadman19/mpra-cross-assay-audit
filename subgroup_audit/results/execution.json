@@ -1,0 +1,712 @@
+{
+  "identity": {
+    "plan_sha256": "8252d9bea14884797e29e5eecfa33d5fef209c1c382d2246d554254265fc64c0",
+    "assets_lock_sha256": "4349d7995f41ec205c321f240193bfb8c1c861c0cddadc7e2daa8b7b319ace06",
+    "input_fingerprint": "4d450bb83b091c7fbaca2d924c7f755c8694aaea85d01b664bd9d2ff11e48396",
+    "python": "3.12.15 (main, Oct  6 2026, 23:50:18) [GCC 15.3.0]",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3"
+  },
+  "complete": true,
+  "native_model_inference_performed": false,
+  "wall_seconds": 38.45169010292739,
+  "input_provenance": {
+    "base": "/home/spath004/cardiac_r21/audit2/Reliability_Audit_v2",
+    "source_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+    "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+    "original_primary_summary": {
+      "decision": "FAIL",
+      "primary_model": "Enformer DNASE frozen point forecast",
+      "primary_policy": "Kircher-trained open-model risk",
+      "datasets": {
+        "Abell": {
+          "evaluability": true,
+          "retained_audited_variants_candidate": 4765,
+          "retained_audited_variants_baseline": 4726,
+          "contributing_blocks": 445,
+          "primary_error_reduction": -0.021353242694406915,
+          "CI95": [
+            -0.03551988089889097,
+            -0.007469605753243856
+          ],
+          "CI97_5": [
+            -0.037811074294587625,
+            -0.0051755376367762585
+          ],
+          "conditional_error_reduction": -0.010229742880790205,
+          "conditional_CI95": [
+            -0.01990991788662761,
+            -0.0007074620533580493
+          ],
+          "audit_opportunity_ratio": 1.0082522217520102,
+          "point_correlation_CI95": [
+            0.018840107386139445,
+            0.04427269536386809
+          ],
+          "pass": false
+        },
+        "Ulirsch": {
+          "evaluability": true,
+          "retained_audited_variants_candidate": 264,
+          "retained_audited_variants_baseline": 217,
+          "contributing_blocks": 50,
+          "primary_error_reduction": -0.002714355536936164,
+          "CI95": [
+            -0.0650476431968875,
+            0.06726777164695998
+          ],
+          "CI97_5": [
+            -0.07489891439956294,
+            0.07692593595762622
+          ],
+          "conditional_error_reduction": 0.008212217889637274,
+          "conditional_CI95": [
+            -0.020312437867546478,
+            0.03798987370415947
+          ],
+          "audit_opportunity_ratio": 1.2165898617511521,
+          "point_correlation_CI95": [
+            0.04169000379464269,
+            0.15273374186178262
+          ],
+          "pass": false
+        }
+      },
+      "real_model_scores": true,
+      "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+      "AlphaGenome_in_primary_fit": false,
+      "analysis_role": "Primary locked open-model audit",
+      "clinical_interpretation": false,
+      "bootstrap": "Paired 1 Mb block resampling, conditional on fixed policies; genomic blocks are not proven LD-independent",
+      "prospective_status": "Frozen on Kircher; no validation outcomes fitted to deployment policy",
+      "noise_correction_status": "Classical additive-error approximation; no pervariant SEs manufactured for Kircher"
+    },
+    "shards": [
+      {
+        "model": "enformer",
+        "shard": 0,
+        "state_sha256": "2721d1b64d1aea4dcceb2cd648886c6107e59cfaf11f7d10bbb95e77882b6c49",
+        "journal_sha256": "1d1d8e8175018e98bdf5df97583f9b38b62b16482f0708227fec0e9277ac5b06",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 0,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 1,
+        "state_sha256": "50e4bba079e781710b5fb89c5090bc928b0ef06fb152020e0b31b15df2972a41",
+        "journal_sha256": "13a8196b7d7be685038d92b665fa6a6089c21180a9f8e2fee167784298659db8",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 1,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 2,
+        "state_sha256": "156e0eba58223918522364eb90c216aac0de20c9e028b292dd79f82ab50b5a18",
+        "journal_sha256": "bfb555f0862e09e623ff98ec39ab7128478256bba3413f920ee9e565ff7fd9ad",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 2,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 3,
+        "state_sha256": "a5e243234566b7a7942a7ff5209e9630aaa023626d36ae21c3d0d00d1beb3afb",
+        "journal_sha256": "5dec13f854e4b58c64ac9dad4dd4f5b2f9d37b0a4d087e6d0049f67fc1046070",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 3,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 4,
+        "state_sha256": "4528632afdf50a6f23bada07328515c5a490276643cbdfd89624c33e034c562a",
+        "journal_sha256": "ce4702e8580fbd8223435db8978a3082ab7188cfb8eb5d431e11f269e923878c",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 4,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 5,
+        "state_sha256": "10eb78e4e33f02ba4e150c7e63076b3e4b9feb2ec5a9551a2d586dbcb4b723e9",
+        "journal_sha256": "c5bc5e3aea0677ef23924c0d6a35742e695c7284899b71fa5efc92a2ba72e973",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 5,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 6,
+        "state_sha256": "741d3c23aaa3d11b2b8ca600f6dc386bb9f913e4be9f17be18d07f0925191b2a",
+        "journal_sha256": "2ebdc95cdd0ea27a57c511ea8122c2914880aaa8781cf87ed21b5229fbaef884",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 6,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "enformer",
+        "shard": 7,
+        "state_sha256": "e44b06235648c9b9b5911f7c4fb1ccbafe40d0f5466ff167e60ac31d58955075",
+        "journal_sha256": "671e3c24870e45ba20dc0f541ff0d1b4e4ed6cd08652c2cd0682fa61339fbb8c",
+        "identity": {
+          "model": "enformer",
+          "model_spec": {
+            "repo": "EleutherAI/enformer-official-rough",
+            "revision": "affe5713ae9017460706a44108289b13c5fee16c",
+            "weights": "pytorch_model.bin",
+            "sha256": "99b09d602e195d89c7d4debe144bb2f43907ba0d74006e97098e99d9171c439c",
+            "length": 196608,
+            "bin_bp": 128,
+            "tracks": 5313
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 7,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 0,
+        "state_sha256": "72734dc99ec9fb8110542cb5c2279c618171a7b318d7130b3727605ca61ea7df",
+        "journal_sha256": "e3a6346b88d769940092aa4792a12c8e81dfa711eeec6d81a63b09570cc097a8",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 0,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 1,
+        "state_sha256": "ce6408f0e6da8196f3c660fd38280a02dff07ec5bee231b86829f36e5026de45",
+        "journal_sha256": "a40b07b4e84e2e705bc7754a3c6399c786a8610be6eebece314bc53476f64838",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 1,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 2,
+        "state_sha256": "ae1928878f7e236369632e93a481bc26a363a89cf05f4225ad8d87442fbaca34",
+        "journal_sha256": "0a3e3506ea1a5837b0254360765c4f0b6165ec9f8e578d5bc58381f757e22923",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 2,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 3,
+        "state_sha256": "4d1c7dc2b6272e3b6d75561b2d4af0360c9b8ffb273e11c664d12a82824bb7ed",
+        "journal_sha256": "b257bed9decff7045f4b7894b95f265591fb29eecef7a707d190f232992b0bcd",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 3,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 4,
+        "state_sha256": "7a97671e664ae4f62c2c46dc7f5e105e7e3f50c69bf0cbe04ed4b354af1a40e6",
+        "journal_sha256": "c898189a2a9b4f9f92b2db02eb5801b1de6884111dcc31ab4b643877edcfb1d3",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 4,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 5,
+        "state_sha256": "884f5ad89bbca4cb2e152258a72f52d9d79e63515fc4b19d3d7834611a1e80d1",
+        "journal_sha256": "6c1808f7b2778ffc287205bb7a728c25083323f3eebf5cd7d5a8b3dba94d82a3",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 5,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 6,
+        "state_sha256": "bb18c3542bb3da66f625ab91292e1c8d7783114de68d9469146a2b4c893ea474",
+        "journal_sha256": "f893fa862bafa42dd04654c0b0131353c61e9bbca1158ce5f1439e89fe2db4a3",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 6,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      },
+      {
+        "model": "borzoi",
+        "shard": 7,
+        "state_sha256": "9d0ff0bb3b9a12dce6e0b89125e5eab15e26fb6401862cc02935d7bef93e049c",
+        "journal_sha256": "8d625bf4014f88e863039fd01f258f9d60085a4e6e83ca7972e32af47eccca94",
+        "identity": {
+          "model": "borzoi",
+          "model_spec": {
+            "repo": "johahi/borzoi-replicate-0",
+            "revision": "521db103372769581b8d1d616e6a3b496da490c5",
+            "weights": "model.safetensors",
+            "sha256": "d839593c3350bc3aea93b7a6d1fc3ce2b1629e0f4322ecb3c6b6743d14932f75",
+            "length": 524288,
+            "bin_bp": 32,
+            "tracks": 7611
+          },
+          "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+          "source_rows_sha256": "ce4c7a73ed35710e6161d423dc997c2d098f94ccbc5cc57b6be0d5c48804784e",
+          "code_sha256": {
+            "alpha_optional.py": "c805cc04a91cd02c3c5a24b9af1dcc694fc13d4268d5d6366f00bed0746be899",
+            "audit.py": "2b2f544fd0d89dc9ac231f05a96f8b2e31589b9a5099a0967acf7a150108aa28",
+            "build_preprint.py": "08033367e0b52d959694f1d65d0354683344a3ff56050046fdd8258b4d263ca3",
+            "common.py": "5cb286f9752b9b2d5767dcead890eb8beba012929001c4eb968eccec7169fd03",
+            "download_reference.py": "d77eb7dfbb9e942c46c8998ef17821dd78eb2cd0c2006c8719bbf483c913df4f",
+            "models.py": "d76d7cb31ad2ceb0c928cff567a5d39fcbe2a2e16cf9e5a3d7021ff85bf650e7",
+            "preflight.py": "bbafba92dc9c1d2f31e9f79d4d4cfd9cf66263a5bfee3ad2b00d0ebb79ded8f4",
+            "prepare_data.py": "ec0a7d51d19479d7cc06b42e51597c4698ebe00a45753f0148a43feada1146fb",
+            "prepare_kircher.py": "25887f03b4b500b44dd15710ca45a95816337f0e43830e5159ba9558904f381a",
+            "score_open_models.py": "ca5ed1a84a0103256adf58b8d388e88d23056286c99ee496f12a490f8cc9cd8a"
+          },
+          "shard": 7,
+          "shards": 8,
+          "dtype": "float32",
+          "torch_version": "2.6.0+cu118",
+          "cuda_version": "11.8",
+          "cudnn_version": 90100
+        },
+        "recorded_device": "Tesla V100-SXM2-16GB"
+      }
+    ],
+    "known_implementation_fix": "User reports N-padding correction at chromosome boundaries; recorded code hashes preserved, no scoring changes made by this package."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "decision": "FAIL",
+  "primary_model": "Enformer DNASE frozen point forecast",
+  "primary_policy": "Kircher-trained open-model risk",
+  "datasets": {
+    "Abell": {
+      "evaluability": true,
+      "retained_audited_variants_candidate": 4765,
+      "retained_audited_variants_baseline": 4726,
+      "contributing_blocks": 445,
+      "primary_error_reduction": -0.021353242694406915,
+      "CI95": [
+        -0.03551988089889097,
+        -0.007469605753243856
+      ],
+      "CI97_5": [
+        -0.037811074294587625,
+        -0.0051755376367762585
+      ],
+      "conditional_error_reduction": -0.010229742880790205,
+      "conditional_CI95": [
+        -0.01990991788662761,
+        -0.0007074620533580493
+      ],
+      "audit_opportunity_ratio": 1.0082522217520102,
+      "point_correlation_CI95": [
+        0.018840107386139445,
+        0.04427269536386809
+      ],
+      "pass": false
+    },
+    "Ulirsch": {
+      "evaluability": true,
+      "retained_audited_variants_candidate": 264,
+      "retained_audited_variants_baseline": 217,
+      "contributing_blocks": 50,
+      "primary_error_reduction": -0.002714355536936164,
+      "CI95": [
+        -0.0650476431968875,
+        0.06726777164695998
+      ],
+      "CI97_5": [
+        -0.07489891439956294,
+        0.07692593595762622
+      ],
+      "conditional_error_reduction": 0.008212217889637274,
+      "conditional_CI95": [
+        -0.020312437867546478,
+        0.03798987370415947
+      ],
+      "audit_opportunity_ratio": 1.2165898617511521,
+      "point_correlation_CI95": [
+        0.04169000379464269,
+        0.15273374186178262
+      ],
+      "pass": false
+    }
+  },
+  "real_model_scores": true,
+  "protocol_sha256": "a8e50d125ef31cd44d00b251954b7719fba654e7dedc598f2828ef68cd64de75",
+  "AlphaGenome_in_primary_fit": false,
+  "analysis_role": "Primary locked open-model audit",
+  "clinical_interpretation": false,
+  "bootstrap": "Paired 1 Mb block resampling, conditional on fixed policies; genomic blocks are not proven LD-independent",
+  "prospective_status": "Frozen on Kircher; no validation outcomes fitted to deployment policy",
+  "noise_correction_status": "Classical additive-error approximation; no pervariant SEs manufactured for Kircher"
+}

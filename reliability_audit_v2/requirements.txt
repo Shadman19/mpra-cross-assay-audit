@@ -1,0 +1,27 @@
+# Python 3.11 or 3.12. Install CUDA Torch separately using hpc/setup_env.sh.
+# Vendored pinned model implementations avoid incompatible upstream dependency
+# declarations. Their unchanged source and licenses are under vendor/.
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.6.1
+joblib==1.4.2
+matplotlib==3.10.3
+py2bit==0.3.3
+pyliftover==0.4.1
+transformers==4.57.6
+huggingface-hub==0.36.0
+safetensors==0.6.2
+einops==0.8.1
+torchmetrics==1.8.2
+polars==1.34.0
+pyfaidx==0.9.0.3
+pyyaml==6.0.3
+intervaltree==3.1.0
+sortedcontainers==2.4.0
+discrete-key-value-bottleneck-pytorch==0.0.8
+reportlab==4.4.5
+# Optional AlphaGenome acquisition. Fitting remains gated independently.
+alphagenome==0.10.0
+anndata==0.11.4
+zarr==2.18.7

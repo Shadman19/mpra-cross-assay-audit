@@ -1,0 +1,41 @@
+{
+  "provenance": "User-reported completed Wahab v2 run; raw exports not available in this sandbox. CPU package verifies and reconciles on Wahab.",
+  "decision": "FAIL",
+  "Abell": {
+    "gain": -0.021,
+    "CI95": [
+      -0.036,
+      -0.007
+    ],
+    "conditional_gain": -0.01,
+    "conditional_CI95": [
+      -0.02,
+      -0.001
+    ],
+    "point_correlation_CI95": [
+      0.019,
+      0.044
+    ],
+    "audited_policy": 4765,
+    "audited_magnitude": 4726
+  },
+  "Ulirsch": {
+    "gain": -0.003,
+    "CI95": [
+      -0.065,
+      0.067
+    ],
+    "conditional_gain": 0.008,
+    "conditional_CI95": [
+      -0.02,
+      0.038
+    ],
+    "point_correlation_CI95": [
+      0.042,
+      0.153
+    ],
+    "audited_policy": 264,
+    "audited_magnitude": 217
+  },
+  "count_note": "These counts are retained AUDITED sign calls. Total retained candidate counts are matched by the original protocol."
+}

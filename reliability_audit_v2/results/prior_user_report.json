@@ -1,0 +1,26 @@
+{
+  "provenance": "User-reported Wahab results; not rerun or independently verified in this package",
+  "AlphaGenome_condition_best_of_four_correlation_median": 0.65,
+  "AlphaGenome_range_PKLR_to_FOXE1": [
+    0.83,
+    0.03
+  ],
+  "magnitude_25pct_Spearman_before_after": [
+    0.4,
+    0.59
+  ],
+  "wrong_sign_percent_before_after": [
+    27,
+    12.5
+  ],
+  "agreement_increment": 0.004,
+  "spread_accuracy_rho": 0.6,
+  "agreement_accuracy_rho": 0.54,
+  "measured_spread_accuracy_rho": 0.85,
+  "partial_rho_controlling_assay_spread_conditions": 0.19,
+  "partial_p_conditions": 0.32,
+  "conditions": 29,
+  "elements": 21,
+  "partial_rho_elements": 0.09,
+  "inference": "No reliable evidence that prediction spread adds element reliability information beyond measured assay spread. Measured spread is an audit covariate only, never a deployment feature."
+}
