@@ -1,6 +1,14 @@
+LOFO risk-error Spearman (frozen recipe): 0.317
+source family-bootstrap 95% CI 0.245 to 0.387
+q
+0    0.000
+1    0.033
+2    0.124
+3    0.207
+4    0.287
 ### (a) risk-error Spearman, source minus target (Kircher LOFO, family bootstrap; target block bootstrap)
-Abell    source=0.308 target=0.009 diff=0.299 95% CI 0.204 to 0.399
-Ulirsch  source=0.308 target=0.008 diff=0.300 95% CI 0.191 to 0.413
+Abell    source=0.317 target=0.009 diff=0.308 95% CI 0.231 to 0.384
+Ulirsch  source=0.317 target=0.008 diff=0.309 95% CI 0.217 to 0.400
 
 ### (b) median within-group Pearson r, source minus target (group bootstrap)
 all    Abell    source=0.351 (21) target=0.028 (381) diff=0.323 95% CI 0.175 to 0.536
