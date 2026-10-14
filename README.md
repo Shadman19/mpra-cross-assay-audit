@@ -11,7 +11,7 @@ Code, frozen analysis plans and results for the manuscript
 - `subgroup_audit/` - prespecified 70-test follow-up (Holm), noise ceilings, `PREREGISTRATION.md` and logged
   protocol deviations in `DEVIATIONS.md`.
 - `exploratory/` - post hoc analyses reported as exploratory in the paper (one script, `diagnostics.py`), and
-  `check_paper_numbers.py`, which checks every manuscript number against the result tables.
+  `check_paper_numbers.py`, which checks 58 selected manuscript numbers against the result tables.
 
 ## Data
 All inputs are public (GEO GSE126550, GSE174534, GSE87711; UCSC hg38 and liftover chain). Raw files are not
@@ -20,7 +20,7 @@ SHA-256 values listed in `reliability_audit_v2/README.md`. Model weights are dow
 
 ## Reproduce
 CPU, from the repository root: `bash reproduce.sh`. It installs the pinned environment, regenerates all exploratory
-tables and checks every manuscript number (primary, follow-up and exploratory) against the result files.
+tables and checks 58 selected numerical assertions from the manuscript (primary, follow-up and exploratory) against the result files.
 
 GPU scoring and the original CPU audits are described in `reliability_audit_v2/README.md` and
 `subgroup_audit/README.md`. Those two READMEs and `reliability_audit_v2/FILE_SHA256.json` are the original package

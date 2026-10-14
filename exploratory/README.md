@@ -12,10 +12,12 @@ source-minus-target contrasts). It follows the locked audit package exactly:
 - 2,000 cluster-bootstrap draws; percentile 95% intervals conditional on the frozen policies; simultaneous
   max-|z| bands over each study's 24 rule-by-retention comparisons.
 
-`check_paper_numbers.py` compares the values quoted in the paper with the result tables and exits non-zero on
+`check_paper_numbers.py` compares 58 selected values quoted in the paper (hard-coded in the script) with the result tables and exits non-zero on
 any mismatch. Run both with `bash reproduce.sh` from the repository root (pinned versions in `requirements.txt`;
 exact Kircher-risk reproduction needs these versions).
 
 `superseded/` keeps earlier scripts and outputs for transparency. They used a pooled-mean error definition,
 element-level units and, in `diag2.py`/`diag3.py`, refits that did not follow the package's fit/calibration split.
 Their numbers are not used in the manuscript.
+
+Zero forecasts: none of the audited variants has an Enformer DNASE prediction of exactly zero in any study, so the error function (zero counts as wrong) and the balanced-accuracy convention (zero counts as down) cannot disagree.

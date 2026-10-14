@@ -56,5 +56,5 @@ for (m, t), vals in {('risk_error_spearman', 'Abell'): (0.33, 0.25, 0.39), ('ris
         check(f'contrast {m} {t} {col}', row[col], pv, 2)
 cv = pd.read_csv(EX / 'simple_rule_curves.csv')
 check('Kircher magnitude 25% error (%)', 100 * cv[(cv.dataset == 'Kircher') & (cv.rule == 'magnitude') & (cv.retain == 0.25)].sign_error.iloc[0], 6.1, 1)
-print('\nFAILED: ' + ', '.join(fails) if fails else '\nAll checked manuscript numbers match the result tables.')
+print('\nFAILED: ' + ', '.join(fails) if fails else '\nAll 58 selected manuscript values match the result tables.')
 raise SystemExit(1 if fails else 0)
