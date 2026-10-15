@@ -100,7 +100,7 @@ for t in ['Abell', 'Ulirsch']:
                 X = XB if variant == 'target_only' else np.hstack([XB, pk[:, None]])
                 p, al, k = fit_predict(X[tr], y[tr], cl[tr], X[te], SEED + rep)
                 rs.append(np.corrcoef(p, y[te])[0, 1])
-            add(exp='curve', target=t, features=variant, budget=frac, pearson=float(np.mean(rs)), ci_lo=float(np.min(rs)), ci_hi=float(np.max(rs)), alpha=f'n_blocks={len(pick)};inner_k={k}')
+            add(exp='curve', target=t, features=variant, budget=frac, pearson=float(np.mean(rs)), rep_min=float(np.min(rs)), rep_max=float(np.max(rs)), alpha=f'n_blocks={len(pick)};inner_k={k}')
 
 out = pd.DataFrame(res); out.to_csv(OUT / 'solve_results.csv', index=False)
 pd.set_option('display.width', 220); print(out.round(3).to_string(index=False))
