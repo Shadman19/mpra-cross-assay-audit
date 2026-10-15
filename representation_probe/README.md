@@ -50,11 +50,44 @@ three heads cannot be read as a cell-matching contrast, and their similarity doe
 training objective, architecture or cell identity as the cause of the gain. Ulirsch is K562, a cell
 type Malinois was trained on, and shows no gain, but with only 79 blocks that comparison is weak.
 
+## 4. Filtering on predicted ACTIVITY rather than predicted effect (exploratory)
+
+`activity_filter.py` and `activity_control.py`. Kircher samples densely inside 21 curated active
+elements; Abell and Ulirsch are sparse variants spread over 525 and 79 genomic blocks. Where the
+reference sequence is not active in a reporter there is no allelic effect to measure, only noise.
+Every filter tested so far, including the confidence filtering in the paper, keys on the predicted
+EFFECT. This one keys on the predicted ACTIVITY of the reference 200 bp window, scored with Malinois.
+It is prospective: it never touches the measured outcome.
+
+**Result: accuracy rises steeply and monotonically with predicted activity, on both studies.**
+Retaining the most active variants, Pearson against the measured effect:
+
+| retained | Abell, Enformer | Abell, Malinois | Ulirsch, Enformer | Ulirsch, Malinois |
+|---|---|---|---|---|
+| all | 0.031 | 0.075 | 0.095 | 0.104 |
+| top 50% | 0.043 | 0.097 | 0.136 | 0.133 |
+| top 25% | 0.065 | 0.125 | 0.213 | 0.225 |
+| top 10% | 0.095 [0.037, 0.153] | 0.170 [0.126, 0.212] | 0.335 [0.121, 0.511] | 0.348 [0.136, 0.507] |
+
+Sign error also moves off chance for the first time on an external study: Ulirsch Enformer falls from
+0.476 unfiltered to 0.360 in the top 10 percent. On Abell it stays near 0.47.
+
+The obvious artifact is range restriction, since selecting on activity could simply concentrate large
+effects. It does not. The SD of the measured effect is flat or lower in the retained sets (Abell
+0.729 to 0.724; Ulirsch 0.514 to 0.450), and two controls at each retention level separate the
+selection from chance: random subsets of the same size give about 0.00, and random subsets matched on
+the distribution of the measured effect magnitude sit at the unfiltered value (Abell Enformer 0.031
+[-0.009, 0.067] against 0.095 selected; Ulirsch Enformer 0.100 [-0.023, 0.265] against 0.335).
+
+This is exploratory and was not preregistered. Thresholds and controls were fixed before the output
+was read, and the retained counts are small at the strictest level (2,204 Abell, 238 Ulirsch rows).
+
 ## Reading
 
-Within the models and probes tested here, none of the three attempts recovers cross-study
+Within the models and probes tested here, none of the first three attempts recovers cross-study
 performance, and one MPRA-trained model gives a modest improvement on one of the two external
-studies. These experiments bound what these particular models and readouts achieve. They do not
+studies. The fourth attempt is different in kind: it does not change the model, it changes which
+variants the model is asked about, and it works on both studies. These experiments bound what these particular models and readouts achieve. They do not
 establish that the targets are unlearnable from sequence: a replicate-derived ceiling says the
 measurements are reproducible, not that sequence alone can reach them.
 
