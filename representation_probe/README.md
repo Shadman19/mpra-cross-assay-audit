@@ -95,6 +95,34 @@ genomic blocks lifts Ulirsch from 0.095 to above 0.30 by either criterion. The u
 the selection variable, is what matters here. That needs its own preregistered test before it is
 claimed.
 
+## 5. Why does it fail? Measurement noise versus model failure (`reliability_decomposition.py`)
+
+The previous four attempts establish that the models do not transfer; none of them explains why. The
+most common explanation in the field is that the external assays are too noisy to predict. Each
+audited external row carries a replicate-derived `noise_variance`, so variants can be stratified by
+reliability and the correlation divided by the per-stratum noise ceiling, giving model accuracy after
+removing what measurement noise alone can account for. The decision rule was written into the script
+before the output was read: a flat ratio means noise does not explain the collapse, a steeply rising
+ratio approaching the Kircher value means it does.
+
+**Result on Abell: measurement noise does NOT explain the failure.** In the most reliably measured
+fifth of Abell variants the noise ceiling is 0.971, so the measurements are nearly noise-free, and
+Enformer's correlation there is 0.015 [-0.014, 0.042]. The noise-adjusted ratio is flat and near zero
+across all five strata (0.052, 0.058, 0.045, 0.015 for quintiles 2 to 5). Malinois behaves the same
+way (ratio 0.102, 0.106, 0.102, 0.083). On Abell the models are simply wrong, not merely measured
+badly. This is the clearest single result in this directory and it closes off the standard excuse.
+
+**Result on Ulirsch: suggestive, not conclusive.** The most reliable fifth reaches 0.285 [0.064,
+0.485] for Enformer and 0.308 [0.169, 0.434] for Malinois against a ceiling of 0.912, so ratios of
+0.31 and 0.34 against a pooled 0.14 and 0.15. But the pattern is not monotonic (quintile 3 is
+negative), each stratum holds only 475 variants in about 65 blocks, and the intervals are wide.
+
+**Caveat that weakens the comparison.** The preregistered positive control could not be run: the
+released Kircher table carries no `noise_variance`, so Kircher's noise-adjusted ratio cannot be
+computed from this export and the external ratios have no internal reference point. The Kircher
+figure quoted as a target in the script header (0.71) is derived from the published pooled ceiling,
+not from the same per-variant procedure, so it is indicative only.
+
 ## Reading
 
 Within the models and probes tested here, none of the first three attempts recovers cross-study
