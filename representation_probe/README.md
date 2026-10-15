@@ -59,7 +59,12 @@ Every filter tested so far, including the confidence filtering in the paper, key
 EFFECT. This one keys on the predicted ACTIVITY of the reference 200 bp window, scored with Malinois.
 It is prospective: it never touches the measured outcome.
 
-**Result: accuracy rises steeply and monotonically with predicted activity, on both studies.**
+**Result: accuracy does rise steeply with predicted activity, but the filter FAILS its decision gate.**
+A success gate was fixed by an external reviewer before the output was read: primary forecast Enformer
+DNASE, primary retention the top 25 percent by predicted activity, and a required improvement over a
+magnitude rule retaining the SAME number of variants in each genomic block, with an interval excluding
+zero. `activity_gate.py` scores it.
+
 Retaining the most active variants, Pearson against the measured effect:
 
 | retained | Abell, Enformer | Abell, Malinois | Ulirsch, Enformer | Ulirsch, Malinois |
@@ -69,25 +74,34 @@ Retaining the most active variants, Pearson against the measured effect:
 | top 25% | 0.065 | 0.125 | 0.213 | 0.225 |
 | top 10% | 0.095 [0.037, 0.153] | 0.170 [0.126, 0.212] | 0.335 [0.121, 0.511] | 0.348 [0.136, 0.507] |
 
-Sign error also moves off chance for the first time on an external study: Ulirsch Enformer falls from
-0.476 unfiltered to 0.360 in the top 10 percent. On Abell it stays near 0.47.
+The rise is not range restriction: the SD of the measured effect is flat or lower in the retained sets
+(Abell 0.729 to 0.724; Ulirsch 0.514 to 0.450), random subsets of the same size give about 0.00, and
+random subsets matched on measured effect magnitude sit at the unfiltered value.
 
-The obvious artifact is range restriction, since selecting on activity could simply concentrate large
-effects. It does not. The SD of the measured effect is flat or lower in the retained sets (Abell
-0.729 to 0.724; Ulirsch 0.514 to 0.450), and two controls at each retention level separate the
-selection from chance: random subsets of the same size give about 0.00, and random subsets matched on
-the distribution of the measured effect magnitude sit at the unfiltered value (Abell Enformer 0.031
-[-0.009, 0.067] against 0.095 selected; Ulirsch Enformer 0.100 [-0.023, 0.265] against 0.335).
+**But the block-matched magnitude comparator does just as well.** Paired differences, activity minus
+magnitude, 4,000 block bootstraps: Abell Enformer -0.002 [-0.019, 0.015] at top 25 percent and
+-0.014 [-0.051, 0.021] at top 10; Ulirsch Enformer +0.021 [-0.018, 0.078] and +0.026 [-0.042, 0.106].
+Every interval includes zero, and on Abell the magnitude rule is marginally ahead. Under the gate this
+is descriptive enrichment, not a better filter: **what helps is selecting a few variants per genomic
+block at all, not selecting them by predicted activity.**
 
-This is exploratory and was not preregistered. Thresholds and controls were fixed before the output
-was read, and the retained counts are small at the strictest level (2,204 Abell, 238 Ulirsch rows).
+The per-stratum replicate noise ceiling also rises with selection (Ulirsch 0.699 unfiltered to 0.777
+for the activity set and 0.803 for the magnitude set), so a large part of the apparent gain is
+recovered signal-to-noise rather than better discrimination.
+
+One finding does survive, and it is a nuance the paper should carry: the confidence filtering in the
+paper applies global thresholds and does not beat the unfiltered baseline, whereas selecting within
+genomic blocks lifts Ulirsch from 0.095 to above 0.30 by either criterion. The unit of selection, not
+the selection variable, is what matters here. That needs its own preregistered test before it is
+claimed.
 
 ## Reading
 
 Within the models and probes tested here, none of the first three attempts recovers cross-study
 performance, and one MPRA-trained model gives a modest improvement on one of the two external
-studies. The fourth attempt is different in kind: it does not change the model, it changes which
-variants the model is asked about, and it works on both studies. These experiments bound what these particular models and readouts achieve. They do not
+studies. The fourth attempt changes which variants the model is asked about rather than the model itself.
+Accuracy rises steeply with predicted activity, but it fails its decision gate because an equally
+simple magnitude rule applied within the same genomic blocks does the same thing. These experiments bound what these particular models and readouts achieve. They do not
 establish that the targets are unlearnable from sequence: a replicate-derived ceiling says the
 measurements are reproducible, not that sequence alone can reach them.
 
