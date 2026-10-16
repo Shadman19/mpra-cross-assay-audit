@@ -142,6 +142,37 @@ DNASE, with sign error 0.488. Abell has no sequences in this package, only coord
 So the weak external performance is not an artifact of how the input sequence was constructed. This
 is a negative control rather than a result, and it removes an objection rather than adding a finding.
 
+## 7. Training on the target assay itself (`prep_seqs.py`, `finetune.py`)
+
+Every attempt so far used a model someone else trained: a linear probe on frozen features, or an
+off-the-shelf checkpoint. This is the one recipe never tried. The pretrained Malinois backbone with
+only its last convolutional block unfrozen, plus a small shared scalar head, trained on Abell itself.
+The prediction is a true difference, delta = f(ALT) - f(REF), so swapping alleles negates it and
+identical alleles give exactly zero; both are asserted at run time and hold to 0.0. Outer grouped
+5-fold CV over all 525 Abell blocks, inner grouped early stopping, three seeds averaged without
+picking the best, forward and reverse complement averaged. 22,037 rows, no reference mismatches.
+
+The gates were fixed by an external reviewer before the code was written: pooled out-of-fold Pearson
+at least 0.15, at least 0.10 above the frozen-feature ridge, above the strongest frozen Malinois
+comparator, and sign error at most 0.45.
+
+**Result: fails every gate.**
+
+| | Pearson | sign error |
+|---|---|---|
+| fine-tuned on Abell | 0.056 [0.043, 0.069] | 0.484 |
+| Enformer DNASE | 0.031 [0.019, 0.044] | 0.496 |
+| difference | +0.024 [0.009, 0.040] | |
+
+The improvement over Enformer is real in the sense that its interval excludes zero, and it is
+useless in practice. It is also below the frozen Malinois comparator on the same rows (0.075), so
+fine-tuning on the target assay did not even match applying an MPRA-trained model unchanged.
+
+Following the stopping rule agreed in advance: paired target-assay fine-tuning did not recover
+practically useful performance under this protocol. This bounds the recipe, not sequence prediction
+in general. A different budget, architecture or training set could behave differently, and this
+single run cannot rule that out.
+
 ## Reading
 
 Within the models and probes tested here, none of the first three attempts recovers cross-study
