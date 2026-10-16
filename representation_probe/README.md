@@ -123,6 +123,25 @@ computed from this export and the external ratios have no internal reference poi
 figure quoted as a target in the script header (0.71) is derived from the published pooled ceiling,
 not from the same per-variant procedure, so it is indicative only.
 
+## 6. Were the inputs wrong? Two sensitivity checks (`malinois_score.py --insert-len`, `ulirsch_real_oligos.py`)
+
+An external reviewer raised a fair objection: Malinois was applied to reconstructed genomic windows,
+while these studies assayed short synthetic inserts. A reconstructed window contains sequence the
+assay never tested, so the comparison could have been unfair to the model.
+
+**Insert length makes no difference.** Rescoring every variant with a 150 bp variant-centred window
+instead of 200 bp gives Abell SK-N-SH 0.074 against 0.075, Abell HepG2 0.070 against 0.071, and
+Ulirsch K562 0.103 against 0.104.
+
+**The real assayed sequences make no difference either.** The Ulirsch study design file in the audit
+package carries the actual 145 bp oligos, and all 2,375 primary Ulirsch rows join to it on
+`legacy_row_id`. Scoring those exact sequences, averaging over the tile positions the study used,
+gives K562 0.110 [0.061, 0.154] against 0.104 for the reconstructed window and 0.095 for Enformer
+DNASE, with sign error 0.488. Abell has no sequences in this package, only coordinates.
+
+So the weak external performance is not an artifact of how the input sequence was constructed. This
+is a negative control rather than a result, and it removes an objection rather than adding a finding.
+
 ## Reading
 
 Within the models and probes tested here, none of the first three attempts recovers cross-study

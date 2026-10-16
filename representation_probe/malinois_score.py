@@ -8,6 +8,7 @@ import numpy as np, pandas as pd, torch, py2bit
 ap = argparse.ArgumentParser()
 for k in ['boda', 'artifact', 'genome', 'rows', 'audit_code', 'out']:
     ap.add_argument('--' + k.replace('_', '-'), dest=k, required=True)
+ap.add_argument('--insert-len', dest='insert_len', type=int, default=200)
 a = ap.parse_args(); OUT = Path(a.out); OUT.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, a.audit_code)
 from audit_engine import errors  # noqa: E402
@@ -31,7 +32,8 @@ assert ck['model_module'] == 'BassetBranched', ck['model_module']
 hp = vars(ck['model_hparams']); ok = set(inspect.signature(basset.BassetBranched.__init__).parameters)
 net = basset.BassetBranched(**{k: v for k, v in hp.items() if k in ok})
 net.load_state_dict(ck['model_state_dict']); net.eval()
-L = hp['input_len']; lp = (L - 200) // 2; rp = (L - 200) - lp
+INS = a.insert_len
+L = hp['input_len']; lp = (L - INS) // 2; rp = (L - INS) - lp
 FL, FR = MPRA_UPSTREAM[-lp:], MPRA_DOWNSTREAM[:rp]; IDX = {c: i for i, c in enumerate('ACGT')}
 
 def onehot(seqs):
@@ -63,8 +65,9 @@ for r in v.itertuples():
     ref, alt = str(r.ref).upper(), str(r.alt).upper(); o = p0 - s0
     if w[o:o + len(ref)] != ref: bad += 1
     wa = w[:o] + alt + w[o + len(ref):]
-    refs.append(w[50:250]); c0 = 50 + (len(alt) - len(ref)) // 2; alts.append(wa[c0:c0 + 200])
-g.close(); print('variants', len(v), 'ref mismatches', bad, 'input_len', L, flush=True)
+    st = 150 - INS // 2
+    refs.append(w[st:st + INS]); c0 = st + (len(alt) - len(ref)) // 2; alts.append(wa[c0:c0 + INS])
+g.close(); print('variants', len(v), 'ref mismatches', bad, 'input_len', L, 'insert_len', INS, flush=True)
 skew = predict(alts) - predict(refs)
 cells = ['K562', 'HepG2', 'SKNSH']
 for i, c in enumerate(cells): v['malinois_' + c] = skew[:, i]
